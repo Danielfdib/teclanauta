@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Teclanauta · Academia espacial de mecanografía</title>
+  <meta name="description" content="Aprendé mecanografía con lecciones guiadas y juegos espaciales.">
+  <link rel="icon" href="logo.svg" type="image/svg+xml">
+  <meta name="author" content="Estudio Raíz">
+  <meta name="theme-color" content="#0a0f2a">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Teclanauta · Academia espacial de mecanografía">
+  <meta property="og:description" content="Aprendé a escribir con todos los dedos con lecciones guiadas y juegos espaciales. Gratis, sin registro.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;800&family=Nunito:wght@400;600;800;900&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <canvas id="stars" aria-hidden="true"></canvas>
+
+  <header class="topbar">
+    <button class="brand" data-go="inicio" aria-label="Ir al inicio">
+      <span class="brand-icon">🚀</span><span class="brand-name">TECLA<b>NAUTA</b></span>
+    </button>
+    <nav class="nav" aria-label="Secciones">
+      <button data-go="lecciones"><span>⌨️</span><em>Lecciones</em></button>
+      <button data-go="imagen"><span>🦇</span><em>Imagen</em></button>
+      <button data-go="lluvia"><span>☄️</span><em>Meteoritos</em></button>
+      <button data-go="carrera"><span>🏁</span><em>Carrera</em></button>
+      <button data-go="logros"><span>🏅</span><em>Medallas</em></button>
+      <button data-go="estadisticas"><span>📊</span><em>Estadísticas</em></button>
+    </nav>
+    <div class="rank" id="rankBox"></div>
+    <div class="top-actions">
+      <button id="btnSound" class="icon-btn" title="Activar o silenciar sonidos" aria-label="Sonido">🔊</button>
+      <button id="btnVoice" class="icon-btn" title="Activar o desactivar la voz" aria-label="Voz">🗣️</button>
+    </div>
+  </header>
+
+  <main id="app"></main>
+
+  <div class="small-screen-note">⌨️ Teclanauta se juega con un teclado físico. Abrila en una computadora para la mejor experiencia.</div>
+  <div id="toasts" aria-live="polite"></div>
+
+<!-- ER-CREDIT:START · Pie de Estudio Raíz (no editar a mano: se regenera igual en todos los proyectos) -->
+<style>
+.er-credit{all:initial;display:block;box-sizing:border-box;width:100%;margin:0;padding:18px 16px 22px;background:#0B283D;color:#DCE3E8;font:400 13px/1.5 Inter,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;text-align:center;position:relative;z-index:1}
+.er-credit *{box-sizing:border-box}
+.er-credit a{color:#F9F6F1;text-decoration:none}
+.er-credit a:hover,.er-credit a:focus-visible{text-decoration:underline;text-underline-offset:2px}
+.er-credit__brand{display:inline-flex;align-items:center;gap:10px;font-size:14px}
+.er-credit__brand img{width:30px;height:30px;border-radius:7px;display:block}
+.er-credit__brand strong{font-weight:600;letter-spacing:.2px}
+.er-credit__links{margin:8px 0 0;display:flex;flex-wrap:wrap;justify-content:center;gap:4px 14px}
+.er-credit__legal{margin:8px 0 0;font-size:11.5px;color:#9FB0BC}
+</style>
+<footer class="er-credit" aria-label="Créditos">
+  <a class="er-credit__brand" href="https://estudio-raiz.vercel.app" target="_blank" rel="noopener">
+    <img src="estudio-raiz.svg" alt="" width="30" height="30">
+    <span>Desarrollado por <strong>Estudio Raíz</strong></span>
+  </a>
+  <p class="er-credit__links">
+    <a href="https://wa.me/5492216823580" target="_blank" rel="noopener">WhatsApp</a>
+    <a href="mailto:daniel.franco.dib@gmail.com">Email</a>
+    <a href="https://estudio-raiz.vercel.app/privacidad" target="_blank" rel="noopener">Privacidad</a>
+    <a href="https://estudio-raiz.vercel.app/terminos" target="_blank" rel="noopener">Términos</a>
+  </p>
+  <p class="er-credit__legal">© 2026 Estudio Raíz · Marca en trámite ante el INPI (Acta N.º 4780707) · San Miguel de Tucumán, Argentina</p>
+</footer>
+<!-- ER-CREDIT:END -->
+
+  <script src="js/data.js"></script>
+  <script src="js/core.js"></script>
+  <script src="js/keyboard.js"></script>
+  <script src="js/typer.js"></script>
+  <script src="js/screens/inicio.js"></script>
+  <script src="js/screens/lecciones.js"></script>
+  <script src="js/screens/imagen.js"></script>
+  <script src="js/screens/lluvia.js"></script>
+  <script src="js/screens/carrera.js"></script>
+  <script src="js/screens/estadisticas.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
