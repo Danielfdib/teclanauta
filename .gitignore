@@ -2,3 +2,6 @@
 .claude/settings.local.json
 Thumbs.db
 Desktop.ini
+
+.vercel
+.env*
